@@ -5,6 +5,7 @@ import Mission from '@site/src/components/Aboutpage/Mission';
 import Reach from '@site/src/components/Aboutpage/Reach';
 import Founder from '@site/src/components/Aboutpage/Founder';
 import Newsletter from '@site/src/components/newsletter/Newsletter';
+import WorkShop from '@site/src/components/liveworkshop/LiveWorkshop';
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Mission />
         <Reach />
         <Founder />
+        <WorkShop />
         <Newsletter />
       </main>
     </Layout>
