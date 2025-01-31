@@ -39,6 +39,8 @@ const logo = {
   },
 };
 
+const currentYear = new Date().getFullYear();
+
 function Footer() {
   return (
     <section className={styles.footer}>
@@ -59,7 +61,7 @@ function Footer() {
       </div>
       <hr className={styles.hr}></hr>
       <div className={styles.footer_lower}>
-        <div className={styles.end_first}>© 2023 Kubesimplify</div>
+        <div className={styles.end_first}>© {currentYear} Kubesimplify</div>
         <div className={styles.footer_mail}>
           <IoMdMail className={styles.mail_logo} row="img" />
           <a className={styles.mail_title} href="mailto:kubesimplify@gmail.com">
