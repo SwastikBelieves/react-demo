@@ -19,8 +19,9 @@ export default function Home() {
         <Mission />
         <Reach />
         <Founder />
-        <WorkShop />
         <Newsletter />
+        <WorkShop />
+        
       </main>
     </Layout>
   );
