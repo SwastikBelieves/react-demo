@@ -1,7 +1,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Aboutpage from '@site/src/components/Aboutpage/Mission';
+import Mission from '@site/src/components/Aboutpage/Mission';
+import Reach from '@site/src/components/Aboutpage/Reach';
+import Founder from '@site/src/components/Aboutpage/Founder';
 
 
 export default function Home() {
@@ -12,7 +14,9 @@ export default function Home() {
       {/* <HomepageHeader /> */}
       <main>
         <HomepageFeatures />
-        <Aboutpage />
+        <Mission />
+        <Reach />
+        <Founder />
       </main>
     </Layout>
   );
