@@ -1,79 +1,39 @@
-/* ... other styles ... */
+/* ... other styles (logo, links, etc. from previous responses) */
 
-.navbar {
-  /* ... other styles ... */
-  display: flex; /* Enable flexbox for layout */
-  flex-direction: column; /* Arrange items vertically */
-  align-items: flex-start; /* Align items to the left */
-  padding: 20px; /* Add some padding */
-  width: 250px; /* Set a fixed width for the navbar */
-  height: 100vh; /* Make the navbar full viewport height */
-  background-color: #1a1a1a; /* Example background color */
-  color: white; /* Example text color */
-}
-
-.navbar_links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column; /* Arrange links vertically */
-  width: 100%;
-}
-
-.navbar_links_mobile {
-  /* Styles for mobile menu (if needed) */
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.navbarContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-height: 100vh;
 }
 
-.navbar_link {
-  display: block; /* Make links occupy full width */
-  padding: 10px;
-  text-decoration: none;
+.navbar {
+  position: sticky; /* Or fixed */
+  top: 0;
+  left: 0;
+  width: 250px; /* Adjust as needed */
+  background-color: #1a1a1a;
   color: white;
+  padding: 20px;
+  z-index: 100;
 }
 
-.navbar_link:hover {
-  background-color: #333; /* Example hover effect */
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  margin-left: 250px; /* Key for preventing overlap */
+  background-color: #f0f0f0; /* Example color */
 }
 
-.for_oss, .for_organizations {
-  margin-top: 20px; /* Add spacing between sections */
-  width: 100%;
+/* Mobile View */
+@media (max-width: 680px) {
+  .mainContent {
+    margin-left: 0;
+    padding-top: 60px; /* Adjust if you have a mobile header */
+  }
+  .navbar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+  }
 }
-
-.section_title {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: block; /* Make it a block element */
-  color: #aaa; /* Example color for section titles */
-  font-size: 14px;
-}
-
-.navbar_logopair {
-  display: flex;
-  justify-content: space-between; /* Align logo and menu icon */
-  align-items: center;
-  width: 100%;
-  margin-bottom: 20px; /* Space between logo and links */
-}
-
-.mobile_menu_icon {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px; /* Adjust size as needed */
-  color: white;
-}
-
-.logo {
-  width: 150px; /* Adjust logo size as needed */
-  height: auto;
-}
-
-/* ... other styles ... */
