@@ -82,7 +82,7 @@ function Footer() {
           >
             <TiSocialLinkedin row="img" className={styles.social2} />
           </a>
-          <a target="_blank" href="https://www.instagram.com/saiyampathak/">
+          <a target="_blank" href="https://www.instagram.com/kubesimplify/">
             <AiOutlineInstagram row="img" className={styles.social2} />
           </a>
           <a target="_blank" href="https://github.com/kubesimplify">
