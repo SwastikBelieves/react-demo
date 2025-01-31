@@ -11,7 +11,7 @@ export default function Home() {
       <Mission/>
       <Reach />
       <Founder />
-      <Team heading={"Kubesimplify Ambassadors"} slider={true} />
+      {/* <Team heading={"Kubesimplify Ambassadors"} slider={true} /> */}
     </Layout>
   );
 }
