@@ -230,7 +230,7 @@ export default function HomepageFeatures() {
         {/*   Wanna contribute to Blog , container end  */}
 
         {/* Want to apply, container start */}
-        <div className={styles.hp_cont_6}>
+        {/* <div className={styles.hp_cont_6}>
           <div className={styles.hp_cont_6_img}>
             <img
               className={styles.hp_cont_6_ambassador_image}
@@ -259,7 +259,7 @@ export default function HomepageFeatures() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Want to apply, container end*/}
 
         {/* third portion(container) of the homepage */}
