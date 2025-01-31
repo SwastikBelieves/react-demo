@@ -2,19 +2,19 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-//... (navbarLogo and navbarContent remain the same as in the previous response)
+// ... (navbarLogo and navbarContent remain the same as in the previous response)
 
 function Navbar(props) { // Added props argument
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      window.innerWidth > 680? setIsMobile(false): setIsMobile(true);
+      window.innerWidth > 680 ? setIsMobile(false) : setIsMobile(true);
     };
 
     handleResize(); // Call initially to set correct state
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize); // Clean up
-  },);
+  }, []);
 
   return (
     <div className={styles.navbarContainer}>
@@ -29,16 +29,16 @@ function Navbar(props) { // Added props argument
             className={styles.mobile_menu_icon}
             onClick={() => setIsMobile(!isMobile)}
           >
-            {isMobile? <FaTimes color="white" />: <FaBars color="white" />}
+            {isMobile ? <FaTimes color="white" /> : <FaBars color="white" />}
           </button>
         </div>
         <ul
           className={
-            isMobile? styles.navbar_links_mobile: styles.navbar_links
+            isMobile ? styles.navbar_links_mobile : styles.navbar_links
           }
           onClick={() => isMobile && setIsMobile(false)}
         >
-          {/*... (your navbar links using navbarContent) */}
+          {/* ... (your navbar links using navbarContent) */}
            <li>{navbarContent.home}</li>
           <li>{navbarContent.blog}</li>
           <li>{navbarContent.community}</li>
