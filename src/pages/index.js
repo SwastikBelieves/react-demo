@@ -16,11 +16,11 @@ export default function Home() {
       {/* <HomepageHeader /> */}
       <main>
         <HomepageFeatures />
+        <Mission/>
+        <Reach />
+        <Founder />
+        <Team heading={"Kubesimplify Ambassadors"} slider={true} />
       </main>
-      <Mission/>
-      <Reach />
-      <Founder />
-      <Team heading={"Kubesimplify Ambassadors"} slider={true} />
     </Layout>
   );
 }
