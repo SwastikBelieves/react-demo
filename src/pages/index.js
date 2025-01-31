@@ -15,9 +15,9 @@ export default function Home() {
       {/* <HomepageHeader /> */}
       <main>
         <HomepageFeatures />
-        <Founder />
         <Mission />
         <Reach />
+        <Founder />
         <Newsletter />
       </main>
     </Layout>
