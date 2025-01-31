@@ -1,173 +1,52 @@
-import React, { useEffect, useState } from "react";
-import styles from "./styles.module.css";
-import { FaBars, FaTimes } from "react-icons/fa";
-import BrowserOnly from "@docusaurus/BrowserOnly";
+import React from 'react';
+import Navbar from './Navbar';
+import styles from './styles.module.css';
 
-const navbarLogo = {
-  logo: {
-    Svg: require("@site/static/img/navbarLogo.svg").default,
-  },
-  arrow: {
-    Svg: require("@site/static/img/Arrow.svg").default,
-  },
-};
+// ... (import your SVG images)
+import image1 from '/img/image1.svg';
+import image2 from '/img/image2.svg';
+import image3 from '/img/image3.svg';
+import image4 from '/img/image4.svg';
 
-const navbarContent = {
-  learn: (
-    <>
-      <div className={styles.navbar_dropdown}>
-        <button className={styles.navbar_dropbtn}>
-          Learn{" "}
-          <navbarLogo.arrow.Svg
-            className={styles.navbar_arrow_trying}
-            role="img"
-          />
-        </button>
-        <div className={styles.navbar_dropdown_content}>
-          <a href="https://www.youtube.com/c/saiyam911/videos" target="blank">
-            Video Content
-          </a>
-          <a
-            className={styles.navbar_blog_design}
-            href="https://blog.kubesimplify.com/"
-            target="blank"
-          >
-            Blog Content
-          </a>
-        </div>
-      </div>
-    </>
-  ),
-  communityContent: (
-    <>
-      <div className={styles.navbar_dropdown}>
-        <button className={styles.navbar_dropbtn}>
-          Community{" "}
-          <navbarLogo.arrow.Svg
-            className={styles.navbar_arrow_trying}
-            role="img"
-          />
-        </button>
-        <div className={styles.navbar_dropdown_content}>
-          {/* Links for respective webpage will add when new webpages are formed */}
-          <a href="/ambassadors">Kubesimplify Ambassador</a>
-          <a
-            className={styles.navbar_workshops_designs}
-            href="/workshops"
-          >
-            Workshops
-          </a>
-        </div>
-      </div>
-    </>
-  ),
-  aboutContent: (
-    <>
-      <div className={styles.navbar_about_start}>
-        <a className={styles.navbar_about_word} href="/about">
-          About
-        </a>
-      </div>
-    </>
-  ),
-};
 
-const mobileViewContent = {
-  learn: (
-    <div className={styles.mobilView_learn}>
-      <div>
-        <a href="https://www.youtube.com/c/saiyam911/videos" target="blank">
-          Video Content
-        </a>
-      </div>
-      <div>
-        <a
-          className={styles.navbar_blog_design}
-          href="https://blog.kubesimplify.com/"
-          target="blank"
-        >
-          Blog Content
-        </a>
-      </div>
-    </div>
-  ),
-  community: (
-    <div className={styles.mobileView_community}>
-      <div>
-        <a href="/ambassadors">Kubesimplify Ambassador</a>
-      </div>
-      <div>
-        <a
-          className={styles.navbar_workshops_designs}
-          href="/workshops"
-        >
-          Workshops
-        </a>
-      </div>
-    </div>
-  ),
-};
-
-function Navbar() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      window.innerWidth > 680 ? setIsMobile(false) : setIsMobile(!isMobile);
-    });
-  });
-
+function HomePage() {
   return (
-    <>
-      <section className={styles.navbar}>
-        <nav className={styles.navbar_positioning}>
-          <div className={styles.navbar_logopair}>
-            <div className={styles.navbar_logo}>
-              <a href="/">
-              <navbarLogo.logo.Svg className={styles.logo} role="" />
-              </a>
+    <Navbar>
+      <main className={styles.main}>
+        <div className={styles.hero}>
+          <div className={styles.heroContent}>
+            <h1>Infrastructure as Code</h1>
+            <h2>may be complex, but it doesn't need to be hard.</h2>
+            <p>Navigating the Cloud Native landscape can be tough and just keeping your head above water is a challenge.</p>
+            <p>We're here to help.</p>
+            <div className={styles.heroButtons}>
+              <button className={styles.searchButton}>Search Content →</button>
+              <button className={styles.aboutButton}>About Us</button>
             </div>
-            <button
-              className={styles.mobile_menu_icon}
-              onClick={() => setIsMobile(!isMobile)}
-            >
-              {isMobile ? <FaTimes color="white" /> : <FaBars color="white" />}
-            </button>
           </div>
-          <ul
-            className={
-              isMobile ? styles.navbar_links_mobile : styles.navbar_links
-            }
-            onClick={() => setIsMobile(false)}
-          >
-            <li className={styles.about}>{navbarContent.aboutContent}</li>
-            {isMobile ? (
-              <>
-                <li>{mobileViewContent.learn}</li>
-                <li>{mobileViewContent.community}</li>
-              </>
-            ) : (
-              <>
-                <li className={styles.learn}>{navbarContent.learn}</li>
-                <li className={styles.community}>
-                  {navbarContent.communityContent}
-                </li>
-              </>
-            )}
+          <div className={styles.heroImages}>
+            <div className={styles.imageContainer}>
+              <img src={image1} alt="image1" /> {/* Use imported image */}
+            </div>
+            <div className={styles.imageContainer}>
+              <img src={image2} alt="image2" /> {/* Use imported image */}
+            </div>
+            <div className={styles.imageContainer}>
+              <img src={image3} alt="image3" /> {/* Use imported image */}
+            </div>
+            <div className={styles.imageContainer}>
+              <img src={image4} alt="image4" /> {/* Use imported image */}
+            </div>
+          </div>
+        </div>
 
-            <li>
-              <button className={styles.navbarbutton}>
-                <a
-                  className={styles.navbar_text}
-                  href="https://saiyampathak.substack.com/"
-                >
-                  Newsletter
-                </a>
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </section>
-    </>
+        {/* Rest of your page content */}
+        {[...Array(50)].map((_, i) => (
+          <p key={i}>Paragraph {i + 1}</p>
+        ))}
+      </main>
+    </Navbar>
   );
 }
-export default React.memo(Navbar);
+
+export default HomePage;

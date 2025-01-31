@@ -1,267 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/* ... (other styles) */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.navbarContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .navbar {
   position: sticky;
-  z-index: 999;
   top: 0;
+  left: 0;
+  width: 250px;
+  background-color: #1a1a1a; /* Dark background */
+  color: white;
+  padding: 20px;
+  z-index: 100;
+  overflow-y: auto; /* Make the sidebar scrollable if content overflows */
+  height: 100vh; /* Ensure the sidebar takes full viewport height */
 }
 
-
-.navbar_positioning {
-  background-color: #1B2731;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  margin-left: 250px;
+  background-color: #f0f0f0; /* Light background for content */
 }
 
+/* ... (rest of your CSS styles) */
 
-.navbar_logo {}
-
-
-.logo {
-  width: 75%;
-  padding-top: -10%;
-}
-
-
-.navbar_links {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-
-.mobile_menu_icon {
-  display: none;
-}
-
-@media screen and (max-width: 680px) {
-
-  .navbar_logopair {
-    display: flex;
-    flex-direction: row;
+/* Mobile View */
+@media (max-width: 680px) {
+  .mainContent {
+    margin-left: 0;
+    padding-top: 60px; /* Adjust if you have a mobile header */
+  }
+  .navbar {
     width: 100%;
-  }
-  
-  .logo {
-    padding-left: 10%;
-    display: flex;
-    top: 15px;
-    height: 3.5rem;
-  }
-
-  .navbar_positioning {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .navbar_links {
-    display: none;
-  }
-
-  .navbar_links_mobile {
-    margin-right: auto;
-    list-style: none;
-    transition: all 0.6s ease-out;
-    width: 90%;
-    line-height: 2.2;
-  }
-
-  .about,
-  .community,
-  .learn,
-  .contact,
-  .navbarbutton {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: 100%;
-    transition: all 0.6s ease-out;
-  }
-
-
-  .mobile_menu_icon {
-    margin-left: auto;
-    padding-right: 1rem;
-    padding-top: 10px;
-    display: block;
-    background-color: #1B2731;
-    font-size: 30px;
-    border: none;
-    outline: none;
-    color: #fff;
-  }
-
-  .mobilView_learn {
-    text-align: center;
-  }
-
-  .mobilView_learn * {
-    font-weight: 500;
-    color: white;
-  }
-
-  .mobileView_community {
-    text-align: center;
-  }
-
-  .mobileView_community * {
-    font-weight: 500;
-    color: white;
+    height: auto;
+    position: fixed;
+    overflow-y: auto; /* Make sidebar scrollable on mobile too */
   }
 }
 
-.about,
-.community,
-.learn,
-.contact,
-.navbarbutton {
-  text-decoration: none;
-  font-size: 18px;
-  padding: 0px 10px;
-  margin: 0 5px;
-  cursor: pointer;
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  flex-direction: row; /* Arrange content and images side by side */
+  align-items: center; /* Vertically center content and images */
+  padding: 40px;
+  background-color: #f0f0f0; /* Example background color */
+  min-height: 400px; /* Ensure the hero section has a minimum height */
 }
 
-
-.navbar_about_start a {
-  text-decoration: none;
+.heroContent {
+  flex: 1; /* Take up available space */
+  margin-right: 40px; /* Add spacing between content and images */
+  text-align: left; /* Align text to the left */
 }
 
-.navbar_about_word {
-  font-family: 'Poppins';
-  font-weight: 500;
-  font-style: normal;
-  color: white;
+.heroContent h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #333; /* Darker heading color */
 }
 
-.navbar_about_word:hover {
-  color: aquamarine;
+.heroContent h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #555; /* Slightly darker color */
 }
 
-
-.navbar_about {
-  cursor: pointer;
+.heroButtons {
+  display: flex;
 }
 
-
-.navbar_community_word {
-  font-family: 'Poppins';
-  font-size: 18px;
-  font-weight: 500;
-  font-style: normal;
-  color: white;
-}
-
-.navbar_contact {
-  cursor: pointer;
-}
-
-.navbar_dropdown {
-  width: 70%;
-}
-
-.navbar_learn_word,
-.navbar_contact_word {
-  font-family: 'Poppins';
-  font-size: 20px;
-  font-weight: 500;
-  font-style: normal;
-  color: white;
-}
-
-.navbar_contact_word:hover {
-  color: aquamarine;
-}
-
-.navbar_dropdown_content {
-  display: none;
-  font-weight: 500;
-  position: absolute;
-  background-color: #1B2731;
-
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border-radius: 5px;
-}
-
-
-.navbar_dropdown_content a {
-  font-size: 1vw;
-  font-weight: 500;
-  float: none;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-family: 'Poppins';
-}
-
-.navbar_dropdown_content a:hover {
-  color: aquamarine;
-}
-
-.navbar_dropbtn {
-  color: black;
-}
-
-.navbar_dropdown .navbar_dropbtn {
-  font-size: 18px;
-  font-weight: 500;
+.searchButton, .aboutButton {
+  padding: 10px 20px;
+  margin-right: 10px;
   border: none;
-  outline: none;
-  color: white;
-  background-color: inherit;
-  font-family: 'Poppins';
-  margin: 0;
-  margin-left: 10px;
-  width: 140%;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for buttons */
 }
 
-.navbar_dropdown:hover .navbar_dropdown_content {
-  display: block;
-}
-
-.navbar_newsletter_content {
-  font-family: 'Poppins';
-  font-weight: 500;
-  font-style: normal;
+.searchButton {
+  background-color: #007bff; /* Example color */
   color: white;
 }
 
-.navbarbutton {
-  border-radius: 6px;
-  font-size: 15px;
-  font-family: 'Poppins';
-  /* padding: 20px 20px 20px 20px; */
-  border: solid 2px transparent;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(95.81deg, #34EF42 -23.83%, #27C9F4 121.82%);
-  background-origin: border-box;
-  box-shadow: 2px 900px 1px #1B2731 inset;
+.aboutButton {
+  background-color: #6c757d; /* Example color */
+  color: white;
 }
 
-.navbar_text {
-  font-weight: bold;
-  background: linear-gradient(94.9deg, #34EF42 -32.68%, #27C9F4 130.84%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
+.heroImages {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  justify-content: flex-end; /* Align images to the right */
+  flex: 1; /* Take up available space */
 }
 
-.navbar_blog_design {
-  border-top: 1px solid white;
+.imageContainer {
+    width: 100px; /* Set a fixed width for the images */
+    height: 100px; /* Set a fixed height for the images */
+    margin: 10px; /* Add some margin around the images */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.navbar_workshops_designs,
-.navbar_contri_designs {
-  border-top: 1px solid white;
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+/* ... (rest of your CSS styles) */
