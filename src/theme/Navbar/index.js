@@ -41,16 +41,16 @@ function Navbar(props) { // Added props argument
           {/* ... (your navbar links using navbarContent) */}
            <li>{navbarContent.home}</li>
           <li>{navbarContent.blog}</li>
-          <li>{navbarContent.community}</li>
+          {/* <li>{navbarContent.community}</li> */}
           <li>{navbarContent.about}</li>
-          <li className={styles.for_oss}>
+          {/* <li className={styles.for_oss}>
             <span className={styles.section_title}>For OSS Maintainers</span>
             {navbarContent.shareProject}
           </li>
           <li className={styles.for_organizations}>
             <span className={styles.section_title}>For Organizations</span>
             {navbarContent.partnerships}
-          </li>
+          </li> */}
         </ul>
       </nav>
       <div className={styles.mainContent}>
