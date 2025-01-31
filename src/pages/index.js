@@ -18,7 +18,6 @@ export default function Home() {
         <Mission />
         <Reach />
         <Founder />
-        
         <Newsletter />
       </main>
     </Layout>
