@@ -4,6 +4,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Mission from '@site/src/components/Aboutpage/Mission';
 import Reach from '@site/src/components/Aboutpage/Reach';
 import Founder from '@site/src/components/Aboutpage/Founder';
+import Newsletter from '../newsletter/Newsletter';
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <Founder />
         <Mission />
         <Reach />
+        <Newsletter />
       </main>
     </Layout>
   );

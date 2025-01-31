@@ -9,13 +9,13 @@ import styles from "./styles.module.css";
 import comments from "./assests/Comments.png";
 import reactions from "./assests/Reactions.png";
 import github from "./assests/github.webp";
-import Newsletter from '../newsletter/Newsletter';
+// import Newsletter from '../newsletter/Newsletter';
 import lego from "./assests/lego.webp";
 import vidIcon from "./assests/Video-Icon.png";
 import blogIcon from "./assests/Blog-Icon.png";
 import Link from "./assests/Link.png";
 import BlogsContribute from "./assests/BlogsContribute.png";
-import Ambassador from "./assests/Ambassadors.png";
+// import Ambassador from "./assests/Ambassadors.png";
 import workshop from "./assests/workshop.png";
 
 
@@ -266,7 +266,6 @@ export default function HomepageFeatures() {
 
         {/* third portion(container) of the homepage */}
         
-        <Newsletter />
       </div>
     </section>
   );
