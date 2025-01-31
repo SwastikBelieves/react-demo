@@ -7,89 +7,64 @@ const navbarLogo = {
   logo: {
     Svg: require("@site/static/img/navbarLogo.svg").default,
   },
+  arrow: {
+    Svg: require("@site/static/img/Arrow.svg").default,
+  },
 };
 
 const navbarContent = {
-  home: (
-    <a className={styles.navbar_link} href="/">
-      Home
-    </a>
-  ),
-  blog: (
-    <a
-      className={styles.navbar_link}
-      href="https://blog.kubesimplify.com/"
-      target="blank"
-    >
-      Blog
-    </a>
-  ),
-  community: (
-    <a className={styles.navbar_link} href="/community">
-      Community
-    </a>
-  ),
-  about: (
-    <a className={styles.navbar_link} href="/about">
-      About
-    </a>
-  ),
-  shareProject: (
-    <a className={styles.navbar_link} href="/share-project"> {/* Replace with your actual link */}
-      Share Your Project
-    </a>
-  ),
-  partnerships: (
-    <a className={styles.navbar_link} href="/partnerships"> {/* Replace with your actual link */}
-      Partnerships
-    </a>
-  ),
+  home: <a href="/">Home</a>,
+  blog: <a href="/blog">Blog</a>,
+  community: <a href="/community">Community</a>,
+  about: <a href="/about">About</a>,
+  forOssMaintainers: <a href="/for-oss-maintainers">For Oss Maintainers</a>,
+  shareYourProject: <a href="/share-your-project">Share Your Project</a>,
+  forOrganizations: <a href="/for-organizations">For Organizations</a>,
+  partnerships: <a href="/partnerships">Partnerships</a>,
 };
-
 
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      window.innerWidth > 680 ? setIsMobile(false) : setIsMobile(!isMobile);
-    });
-  }, []); // Add empty dependency array to prevent infinite loop
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 680);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.navbar_logopair}>
-        <div className={styles.navbar_logo}>
-          <a href="/">
-            <navbarLogo.logo.Svg className={styles.logo} role="" />
-          </a>
+    <section className={styles.navbar}>
+      <nav>
+        <div className={styles.navbar_logopair}>
+          <div className={styles.navbar_logo}>
+            <a href="/">
+              <navbarLogo.logo.Svg className={styles.logo} role="img" />
+            </a>
+          </div>
+          <button
+            className={styles.mobile_menu_icon}
+            onClick={() => setIsMobile(!isMobile)}
+          >
+            {isMobile ? <FaTimes color="black" /> : <FaBars color="black" />}
+          </button>
         </div>
-        <button
-          className={styles.mobile_menu_icon}
-          onClick={() => setIsMobile(!isMobile)}
-        >
-          {isMobile ? <FaTimes color="white" /> : <FaBars color="white" />}
-        </button>
-      </div>
-      <ul
-        className={
-          isMobile ? styles.navbar_links_mobile : styles.navbar_links
-        }
-        onClick={() => isMobile && setIsMobile(false)} // Close menu on click in mobile view
-      >
-        <li>{navbarContent.home}</li>
-        <li>{navbarContent.blog}</li>
-        <li>{navbarContent.community}</li>
-        <li>{navbarContent.about}</li>
-        <li className={styles.for_oss}>{/* Added class for styling */}
-          <span className={styles.section_title}>For OSS Maintainers</span> {/* Added span for section title */}
-          {navbarContent.shareProject}
-        </li>
-        <li className={styles.for_organizations}>{/* Added class for styling */}
-          <span className={styles.section_title}>For Organizations</span> {/* Added span for section title */}
-          {navbarContent.partnerships}
-        </li>
-      </ul>
-    </nav>
+        <ul className={isMobile ? styles.navbar_links_mobile : styles.navbar_links}>
+          <li>{navbarContent.home}</li>
+          <li>{navbarContent.blog}</li>
+          <li>{navbarContent.community}</li>
+          <li>{navbarContent.about}</li>
+          <li>{navbarContent.forOssMaintainers}</li>
+          <li>{navbarContent.shareYourProject}</li>
+          <li>{navbarContent.forOrganizations}</li>
+          <li>{navbarContent.partnerships}</li>
+        </ul>
+      </nav>
+    </section>
   );
 }
 

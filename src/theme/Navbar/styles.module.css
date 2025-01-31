@@ -1,79 +1,81 @@
-/* ... other styles ... */
-
 .navbar {
-  /* ... other styles ... */
-  display: flex; /* Enable flexbox for layout */
-  flex-direction: column; /* Arrange items vertically */
-  align-items: flex-start; /* Align items to the left */
-  padding: 20px; /* Add some padding */
-  width: 250px; /* Set a fixed width for the navbar */
-  height: 100vh; /* Make the navbar full viewport height */
-  background-color: #1a1a1a; /* Example background color */
-  color: white; /* Example text color */
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  padding: 20px;
+  height: 100vh;
 }
 
 .navbar_links {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column; /* Arrange links vertically */
-  width: 100%;
 }
 
 .navbar_links_mobile {
-  /* Styles for mobile menu (if needed) */
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar_dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
   width: 100%;
 }
 
-.navbar_link {
-  display: block; /* Make links occupy full width */
+.navbar_dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 100%;
+  top: 0;
+}
+
+.navbar_dropdown:hover .navbar_dropdown_content {
+  display: block;
+}
+
+.navbar_about_start, .navbar_about_word {
   padding: 10px;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
-.navbar_link:hover {
-  background-color: #333; /* Example hover effect */
-}
-
-.for_oss, .for_organizations {
-  margin-top: 20px; /* Add spacing between sections */
+.navbarbutton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
   width: 100%;
-}
-
-.section_title {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: block; /* Make it a block element */
-  color: #aaa; /* Example color for section titles */
-  font-size: 14px;
-}
-
-.navbar_logopair {
-  display: flex;
-  justify-content: space-between; /* Align logo and menu icon */
-  align-items: center;
-  width: 100%;
-  margin-bottom: 20px; /* Space between logo and links */
 }
 
 .mobile_menu_icon {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px; /* Adjust size as needed */
-  color: white;
+  display: none;
 }
 
-.logo {
-  width: 150px; /* Adjust logo size as needed */
-  height: auto;
+@media (max-width: 680px) {
+  .mobile_menu_icon {
+    display: block;
+  }
+  .navbar_links {
+    display: none;
+  }
+  .navbar_links_mobile {
+    display: flex;
+  }
 }
-
-/* ... other styles ... */
