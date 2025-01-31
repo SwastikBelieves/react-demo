@@ -28,7 +28,7 @@ export default function HomepageFeatures() {
             <p className={styles.hp_cont_1_p1}>
               On a mission to <br />
               teach <span className={styles.hp_cont_1_cloud}>
-                cloud native
+                cloud native aa
               </span>{" "}
               <br />
               to everyone.
