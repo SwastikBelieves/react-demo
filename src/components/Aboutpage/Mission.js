@@ -17,7 +17,7 @@ const AboutpageFeatures = () => {
 
     <div className={styles.ap_cont_1_mission}>
       <h1 className={styles.ap_cont_1_mission_content}> On a mission to teach  
-      <span className={styles.ap_cont_1_cloud}> cloud native</span> to everyone </h1>
+      <span className={styles.ap_cont_1_cloud}>cloud native, wasam & AI</span> to everyone </h1>
       <h3 className={styles.ap_cont_1_mission_content_para}> Simplifying cloud native for all so that more people<br /> 
       can learn, get good jobs and earn more! </h3>
     </div>
