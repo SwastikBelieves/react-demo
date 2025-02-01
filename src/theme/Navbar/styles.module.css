@@ -1,4 +1,18 @@
 /* General Navbar Styles */
+
+.main_content {
+  margin-left: 260px; /* Adjust based on the navbar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive Fix */
+@media screen and (max-width: 680px) {
+  .main_content {
+    margin-left: 0;
+  }
+}
+
 .navbar_vertical {
   width: 250px;
   height: 100vh;
