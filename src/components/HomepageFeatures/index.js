@@ -37,9 +37,9 @@ export default function HomepageFeatures() {
             </p>
 
             <p className={styles.hp_cont_1_p2}>
-              We breakdown complicated concepts of <br />
-              cloud native into an easy to understand <br />
-              manner through our blogs and video content.
+            We breakdown complicated concepts <br/>
+             of into an easy-to-understand<br/>
+            manner through our blogs and video content.
             </p>
 
             <a href="https://discord.gg/26Z384WSPB" target="_blank">

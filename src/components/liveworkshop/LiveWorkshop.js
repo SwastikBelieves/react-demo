@@ -62,7 +62,7 @@ const LiveWorkshop = () => {
                 className={styles.video}
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/oiBdx7et21w"
+                src="https://www.youtube.com/embed/PN3VqbZqmD8?si=JVGdI_Bes6H0DjLs"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               ></iframe>
             </center>
