@@ -1,7 +1,7 @@
 /* General Navbar Styles */
 
 .main_content {
-  margin-left: 260px;!important /* Adjust based on the navbar width */
+  margin-left: 260px !important;/* Adjust based on the navbar width */
   padding: 20px;
   transition: margin-left 0.3s ease;
 }
