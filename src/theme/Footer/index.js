@@ -50,9 +50,9 @@ function Footer() {
           <p className={styles.sponsors_content}>{content.sponsorsContent}</p>
         </div>
         <div className={styles.sponsors_card}>
-          <p className={styles.sponsors_card_title}>Sponsor us on Hashnode</p>
+          <p className={styles.sponsors_card_title}>Sponsors</p>
 
-          <a href="https://blog.kubesimplify.com/sponsor">
+          <a href="https://drive.google.com/file/d/14Ma_oGNql3dm8TFJjlNxP9F6cCI3xGZU/view?usp=drivesdk">
             <button className={styles.sponsor_hashnode}>
               <logo.hashnode.Svg className={styles.logo} role="img" /> Sponsor
             </button>
