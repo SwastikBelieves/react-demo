@@ -82,6 +82,7 @@ function Navbar() {
         </div>
         <ul className={isMobile ? styles.navbar_links_mobile : styles.navbar_links_vertical}>
           <li className={styles.about}>{navbarContent.aboutContent}</li>
+          <li className={styles.learn}>OK1/li>
           <li className={styles.learn}>{navbarContent.learn}</li>
           <li className={styles.community}>{navbarContent.communityContent}</li>
           <li>
