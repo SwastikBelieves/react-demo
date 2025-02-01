@@ -16,10 +16,10 @@ const AboutpageFeatures = () => {
 {/* Mission starts */}
 
     <div className={styles.ap_cont_1_mission}>
-      <h1 className={styles.ap_cont_1_mission_content}> On a mission to teach  
-      <span className={styles.ap_cont_1_cloud}> cloud native, wasam & AI</span> to everyone </h1>
+      <h1 className={styles.ap_cont_1_mission_content}>
+      <span className={styles.ap_cont_1_cloud}> 1.7 Million</span> views on Kubernetes Workshop</h1>
       <h3 className={styles.ap_cont_1_mission_content_para}> Simplifying cloud native for all so that more people<br /> 
-      can learn, get good jobs and earn more! <span className={styles.ap_cont_1_cloud}> 1.7 Million views on Kubernetes Workshop</span></h3> 
+      can learn, get good jobs and earn more!</h3> 
     </div>
    
 {/* Our Objective summarize in image */}
