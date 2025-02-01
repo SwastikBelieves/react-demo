@@ -50,7 +50,7 @@ function Footer() {
           <p className={styles.sponsors_content}>{content.sponsorsContent}</p>
         </div>
         <div className={styles.sponsors_card}>
-          <p className={styles.sponsors_card_title}>Sponsors</p>
+          <p className={styles.sponsors_card_title}>Check Our Sponsors</p>
 
           <a href="https://drive.google.com/file/d/14Ma_oGNql3dm8TFJjlNxP9F6cCI3xGZU/view?usp=drivesdk">
             <button className={styles.sponsor_hashnode}>
