@@ -22,7 +22,6 @@ import workshop from "./assests/workshop.png";
 
 export default function HomepageFeatures() {
   return (
-    <div>
     <section className={styles.features}>
       <div className={styles.hp}>
         {/* first portion(container) of the homepage */}
@@ -269,6 +268,5 @@ export default function HomepageFeatures() {
         
       </div>
     </section>
-    </div>
   );
 }
