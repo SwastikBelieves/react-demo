@@ -22,7 +22,7 @@ import workshop from "./assests/workshop.png";
 
 export default function HomepageFeatures() {
   return (
-    <div className="main_content">
+    <div>
     <section className={styles.features}>
       <div className={styles.hp}>
         {/* first portion(container) of the homepage */}

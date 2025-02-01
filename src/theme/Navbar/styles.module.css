@@ -1,133 +1,96 @@
-/* General Navbar Styles */
+/* Make Navbar a Fixed Vertical Sidebar */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px; /* Adjust width as needed */
+  height: 100vh; /* Full height */
+  background-color: #111; /* Dark background */
+  padding-top: 20px;
+  z-index: 1000; /* Ensures it stays above content */
+  display: flex;
+  flex-direction: column;
+}
 
+/* Navbar Links */
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #575757;
+}
+
+/* Ensure Content is Visible */
 .main_content {
-  margin-left: 260px !important;/* Adjust based on the navbar width */
+  margin-left: 260px; /* Push content right of navbar */
   padding: 20px;
   transition: margin-left 0.3s ease;
 }
 
-/* Responsive Fix */
-@media screen and (max-width: 680px) {
-  .main_content {
-    margin-left: 0;
-  }
-}
-
-.navbar_vertical {
-  width: 250px;
-  height: 100vh;
-  background-color: #1e1e1e;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.navbar_positioning {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.navbar_logo_container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.logo {
-  width: 120px;
-  height: auto;
-}
-
-.navbar_links_vertical {
-  list-style-type: none;
-  padding: 0;
-  width: 100%;
-}
-
-.navbar_links_vertical li {
-  margin: 15px 0;
-}
-
-.navbar_links_vertical li a,
-.navbar_dropbtn {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.navbar_links_vertical li a:hover,
-.navbar_dropbtn:hover {
-  background-color: #333;
-}
-
 /* Dropdown Styling */
 .navbar_dropdown {
-  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.navbar_dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .navbar_dropdown_content {
   display: none;
-  flex-direction: column;
-  background-color: #2a2a2a;
-  padding: 10px;
-  border-radius: 5px;
+  position: absolute;
+  background-color: #333;
+  width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .navbar_dropdown:hover .navbar_dropdown_content {
-  display: flex;
+  display: block;
 }
 
-.navbar_dropdown_content a {
-  padding: 5px 10px;
-  color: white;
+/* Responsive: Hide Sidebar in Small Screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 200px;
+  }
+  .main_content {
+    margin-left: 220px;
+  }
 }
 
-.navbar_dropdown_content a:hover {
-  background-color: #444;
-}
-
-/* Mobile Menu */
-.mobile_menu_icon {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: white;
-}
-
-@media screen and (max-width: 680px) {
-  .navbar_vertical {
+@media screen and (max-width: 480px) {
+  .navbar {
     width: 100%;
     height: auto;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
+    position: relative;
   }
-
-  .navbar_links_vertical {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar_links_mobile {
+  .navbar ul {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
-
-  .mobile_menu_icon {
-    display: block;
+  .main_content {
+    margin-left: 0;
   }
 }

@@ -8,13 +8,16 @@ import Newsletter from '@site/src/components/newsletter/Newsletter';
 import WorkShop from '@site/src/components/liveworkshop/LiveWorkshop';
 
 
+
+
 export default function Home() {
   return (
     <Layout
       title={`Kubesimplify`}  
       description="On a mission to simplify cloud-native">
       {/* <HomepageHeader /> */}
-      <main>
+
+      <main className="main_content">
         <HomepageFeatures />
         <Mission />
         <Reach />
