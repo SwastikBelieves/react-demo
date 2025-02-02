@@ -14,9 +14,9 @@ export default function Home() {
   return (
     <Layout
       title={`Kubesimplify`}  
-      description="On a mission to simplify cloud-native">
+      description="On a mission to simplify cloud-native " >
       {/* <HomepageHeader /> */}
-      <main>
+      <main className={styles.maindiv}>
         <HomepageFeatures />
         <Mission />
         <Reach />
