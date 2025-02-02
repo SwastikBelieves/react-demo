@@ -45,7 +45,7 @@ function Navbar() {
               className={styles.navbar_links}
               onClick={() => isMobile && setIsNavOpen(false)} // Close on mobile click
             >
-              <li className={styles.about}>{navbarContent.aboutContent}</li>
+              <li className={styles.about}>{navbarContent.aboutContent} Us</li>
               {isMobile ? (
                 <>
                   <li>{mobileViewContent.learn}</li>
