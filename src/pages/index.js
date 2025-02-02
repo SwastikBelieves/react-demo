@@ -16,7 +16,6 @@ export default function Home() {
       title={`Kubesimplify`}  
       description="On a mission to simplify cloud-native">
       {/* <HomepageHeader /> */}
-      <div className="main_content">
       <main>
         <HomepageFeatures />
         <Mission />
@@ -25,7 +24,6 @@ export default function Home() {
         <Newsletter />
         <WorkShop />  
       </main>
-      </div>
     </Layout>
   );
 }
