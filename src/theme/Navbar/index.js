@@ -25,7 +25,7 @@ const navbarContent = {
         </button>
         <div className={styles.navbar_dropdown_content}>
           <a href="https://www.youtube.com/c/saiyam911/videos" target="blank">
-            Video Content
+            Video Contentss
           </a>
           <a
             className={styles.navbar_blog_design}
