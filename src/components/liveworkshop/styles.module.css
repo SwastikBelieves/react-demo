@@ -21,7 +21,7 @@
 }
 .navbar {
   display: flex;
-  position: sticky;
+  position: absolute;
   top: 0;
   z-index: 999;
   justify-content: center;
