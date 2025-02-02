@@ -1,7 +1,9 @@
 /* CSS file for Homepage  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-
+.maindiv{
+    margin-left: 200px;
+}
 .hp {
     font-family: 'Poppins';
     font-style: normal;
