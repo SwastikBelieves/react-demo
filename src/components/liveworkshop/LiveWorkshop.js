@@ -8,11 +8,11 @@ import { AiFillCalendar, AiFillClockCircle } from "react-icons/ai";
 const LiveWorkshop = () => {
   return (
     <div className={styles.liveworkshop}>
-      <div className={styles.navbar}>
+      <nav className={styles.navbar}>
         <a className={styles.nav_content} href="/" >
           <Logo />
         </a>
-      </div>
+      </nav>
       <main>
         <div className={styles.container}>
           <div className={styles.header}>
