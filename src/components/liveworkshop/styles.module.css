@@ -21,9 +21,9 @@
 }
 .navbar {
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
-  z-index: 999;
+  /* z-index: 999; */
   justify-content: center;
   background-color: #1b2731;
   height: 70px;
